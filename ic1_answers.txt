@@ -1,0 +1,25 @@
+IC1 - COSC 2328 - Professor McCurry
+Implemented by: Zied Raboudi
+
+1. What is a web server, in your own words?
+A program that waits for a browser to ask for a page and then sends it
+back.
+
+2. What does Docker do for us, and how is it different from installing
+   Node directly?
+Docker packs my app and everything it needs into one box that runs the
+same way on any computer. If I just install Node myself, my app only
+works on my machine and might break on someone else's.
+
+3. Why do web files go in a public/ folder?
+The server only shares what's inside public. Everything else stays
+private and nobody on the internet can reach it.
+
+4. What does localhost refer to?
+My own computer. The server is running right here, not out on the
+internet.
+
+5. In docker run -p 3000:3000, what do the two numbers mean?
+The first one is the port on my computer and the second is the port
+inside the container. Docker links them, so when I visit localhost:3000
+my browser reaches the app running inside.
