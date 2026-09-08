@@ -1,0 +1,39 @@
+/* IC5 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+body {
+  font-family: Georgia, serif;
+  background-color: #e6f3fa;
+  color: #222222;
+  margin: 0;
+  padding: 16px;
+}
+
+h1 {
+  color: #0b5394;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+.photo {
+  border: 3px solid #0b5394;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+#intro {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #0b5394;
+}
