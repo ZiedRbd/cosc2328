@@ -1,0 +1,40 @@
+/* IC6 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+:root {
+  --primary-color: #0b5394;
+  --light-bg: #ffffff;
+  --space: 16px;
+  --radius: 8px;
+}
+
+.box {
+  width: 320px;
+  padding: var(--space);                 /* space INSIDE the border */
+  border: 3px solid var(--primary-color);/* the border itself */
+  margin: var(--space) auto;             /* space OUTSIDE; auto centers it */
+  background-color: var(--light-bg);
+  border-radius: var(--radius);
+}
+
+.box h2 {
+  color: var(--primary-color);
+  margin-top: 0;               /* remove the heading's default top gap */
+  margin-bottom: var(--space);
+}
+
+.box p {
+  line-height: 1.6;
+}
+
+.highlight {
+  background-color: #fff3b0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.box-alt {
+  padding: calc(var(--space) * 2);  /* double the inside space */
+  border-width: 6px;                /* thicker border */
+}
