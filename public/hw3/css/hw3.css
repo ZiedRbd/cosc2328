@@ -1,0 +1,70 @@
+/* HW3 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+:root {
+    --main-color: #0b5394;
+    --accent-color: #c0392b;
+    --page-bg: #f4f1ea;
+    --dark: #22272b;
+    --space: 24px;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: #2b2b2b;
+    font-family: Georgia, serif;
+    line-height: 1.65;
+    width: 740px;
+    margin: 0 auto;
+    padding: var(--space);
+}
+
+#name {
+    font-size: 64px;
+    color: var(--main-color);
+    margin: 0;
+}
+
+.subhead {
+    font-size: 18px;
+    font-weight: normal;
+    color: #6b6259;
+    margin: 4px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--main-color);
+    margin: calc(var(--space) * 1.5) 0 8px;
+}
+
+.about {
+    color: var(--accent-color);
+}
+
+.image-wrapper {
+    background-color: var(--dark);
+    color: var(--page-bg);
+    padding: var(--space);
+    border: 3px solid var(--main-color);
+    margin: var(--space) 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image-wrapper h3 {
+    color: var(--page-bg);
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.image-wrapper img {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-bottom: var(--space);
+}
+
+.job-title:hover {
+    color: var(--accent-color);
+}
