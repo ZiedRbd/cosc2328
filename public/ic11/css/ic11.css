@@ -1,0 +1,11 @@
+/* IC11 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background:#eef; display:flex; justify-content:center; align-items:flex-start; padding:40px; }
+.container { background:white; border-radius:12px; box-shadow:0 6px 24px rgba(0,0,0,0.15); padding:32px; max-width:700px; width:100%; }
+h1 { color:#333; text-align:center; margin-bottom:10px; }
+h2 { color:#5b6cf0; margin-bottom:10px; }
+.instructions { color:#666; text-align:center; font-style:italic; margin-bottom:24px; }
+.info-box { background:#f0f4ff; border-left:4px solid #5b6cf0; padding:18px; border-radius:8px; }
+.info-box ul { margin-left:20px; color:#555; }
+.alert { background:#ff6b6b; color:white; padding:12px; border-radius:8px; text-align:center; font-weight:bold; margin:16px 0; }
