@@ -33,6 +33,15 @@ listItems.forEach(function (item, index) {
   }
 });
 
+// --- Stretch: card ids and headings ---
+const allCards = document.querySelectorAll(".card");
+console.log("--- Stretch: Card IDs and Headings ---");
+
+allCards.forEach(function (card) {
+  const heading = card.querySelector("h2");
+  console.log(card.id + " : " + heading.textContent);
+});
+
 // --- Toggling and Removing Classes ---
 const thirdCard = document.getElementById("card-3");
 console.log("--- Toggling and Removing Classes ---");
@@ -52,15 +61,6 @@ const secondCardText = secondCard.querySelector("p");
 secondCardText.textContent = "Even a <script> tag stays plain text with textContent.";
 console.log("--- textContent vs innerHTML ---");
 console.log(secondCardText.textContent);
-
-// --- Stretch: card ids and headings ---
-const allCards = document.querySelectorAll(".card");
-console.log("--- Stretch: Card IDs and Headings ---");
-
-allCards.forEach(function (card) {
-  const heading = card.querySelector("h2");
-  console.log(card.id + " : " + heading.textContent);
-});
 
 // --- Stretch: item counter ---
 const counter = document.getElementById("counter");
