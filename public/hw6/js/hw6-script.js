@@ -16,7 +16,7 @@ const discountCodes = {
 
 const calculateTax = subtotal => subtotal * 0.0825;
 
-const applyDiscount = function (subtotal, code) {
+const applyDiscount = function(subtotal, code) {
   const cleanCode = code.trim().toUpperCase();
 
   if (!cleanCode) {
