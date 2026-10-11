@@ -1,0 +1,69 @@
+<!-- HW6 – COSC 2328 – Professor McCurry
+     Implemented by: Zied Raboudi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW6 - Interactive Product Calculator</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/hw6.css">
+  <script defer src="js/hw6-script.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Product Order Calculator</h1>
+    <p>Pick a product, set a quantity, and add a code to see your total.</p>
+  </header>
+
+  <main class="container">
+
+    <form id="orderForm">
+      <fieldset>
+        <legend>Order Details</legend>
+
+        <div class="form-group">
+          <label for="product">Product</label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Choose a product</option>
+            <option value="laptop">Laptop</option>
+            <option value="tablet">Tablet</option>
+            <option value="phone">Phone</option>
+            <option value="monitor">Monitor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="discountCode">Discount Code (optional)</label>
+          <input type="text" id="discountCode" name="discountCode" placeholder="Try: SAVE10">
+        </div>
+      </fieldset>
+
+      <button type="submit">Calculate Total</button>
+    </form>
+
+    <div id="results" class="results-hidden">
+      <h2>Order Summary</h2>
+      <div class="result-row"><span>Product</span><span id="result-product"></span></div>
+      <div class="result-row"><span>Quantity</span><span id="result-quantity"></span></div>
+      <div class="result-row"><span>Subtotal</span><span id="result-subtotal"></span></div>
+      <div class="result-row"><span>Discount</span><span id="result-discount"></span></div>
+      <div class="result-row"><span>Tax (8.25%)</span><span id="result-tax"></span></div>
+      <div class="result-row total-row"><span>Total</span><span id="result-total"></span></div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Zied Raboudi &middot; COSC 2328 &middot; Professor McCurry</p>
+  </footer>
+
+  <noscript><div class="alert">Enable JavaScript to use the calculator.</div></noscript>
+</body>
+</html>

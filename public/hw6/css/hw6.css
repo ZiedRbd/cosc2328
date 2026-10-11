@@ -1,0 +1,116 @@
+/* HW6 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --main-color: #1e3a6e;
+  --accent-color: #2e7d32;
+  --page-bg: #f0f2f5;
+  --space: 20px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--page-bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+.site-header {
+  background-color: var(--main-color);
+  color: white;
+  padding: var(--space);
+  text-align: center;
+}
+
+.site-header h1 { font-size: 2rem; margin-bottom: 4px; }
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+form {
+  background-color: white;
+  padding: var(--space);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  padding: var(--space);
+  margin-bottom: var(--space);
+}
+
+legend { font-weight: bold; color: var(--main-color); padding: 0 8px; }
+
+.form-group { margin-bottom: 16px; }
+
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+
+select, input[type="number"], input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+select:focus, input:focus { outline: none; border-color: var(--main-color); }
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover { background-color: #16294d; }
+
+#results {
+  background-color: white;
+  padding: var(--space);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: var(--space);
+  border-top: 4px solid var(--accent-color);
+}
+
+#results h2 { color: var(--main-color); margin-bottom: 12px; }
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.total-row {
+  border-bottom: none;
+  border-top: 2px solid var(--main-color);
+  margin-top: 8px;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--main-color);
+}
+
+.results-hidden { display: none; }
+
+.site-footer {
+  text-align: center;
+  padding: var(--space);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.alert { background:#ff6b6b; color:white; padding:12px; border-radius:8px; text-align:center; font-weight:bold; margin:16px; }
