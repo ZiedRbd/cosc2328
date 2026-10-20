@@ -32,12 +32,12 @@ let catalog = [
 
 // --- DOM Elements ---
 
-const productContainer = document.getElementById("product-container");
-const statsContainer = document.getElementById("stats-container");
-const btnShowAll = document.getElementById("btn-show-all");
-const btnSortPrice = document.getElementById("btn-sort-price");
-const btnFilterExpensive = document.getElementById("btn-filter-expensive");
-const btnCalculateTotal = document.getElementById("btn-calculate-total");
+const productContainer = document.querySelector("#product-container");
+const statsContainer = document.querySelector("#stats-container");
+const btnShowAll = document.querySelector("#btn-show-all");
+const btnSortPrice = document.querySelector("#btn-sort-price");
+const btnFilterExpensive = document.querySelector("#btn-filter-expensive");
+const btnCalculateTotal = document.querySelector("#btn-calculate-total");
 
 // --- Render with forEach ---
 
