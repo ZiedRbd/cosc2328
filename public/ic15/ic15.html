@@ -1,0 +1,33 @@
+<!-- IC15 – COSC 2328 – Professor McCurry
+     Implemented by: Zied Raboudi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC15 — Pokémon Lookup</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/ic15.css">
+  <script defer src="js/ic15-script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Pokémon Lookup</h1>
+    <p>fetch() + async/await, live from a real API</p>
+  </header>
+
+  <main id="app-container">
+    <section id="controls">
+      <label for="pokemon-input">Pokémon name:</label>
+      <input type="text" id="pokemon-input" placeholder="Try: pikachu, charizard, eevee">
+      <button id="btn-search">Search</button>
+    </section>
+
+    <p id="status-message"></p>
+
+    <section id="pokemon-card"></section>
+  </main>
+
+  <noscript><div class="alert">Enable JavaScript to view interactive content.</div></noscript>
+</body>
+</html>
