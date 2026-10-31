@@ -123,7 +123,7 @@ body {
     color: #fff;
 }
 
-/* one colour per priority level */
+/* one color per priority level */
 .badge.low { background-color: #2e9e5b; }
 .badge.medium { background-color: #e08a1e; }
 .badge.high { background-color: #c0392b; }
