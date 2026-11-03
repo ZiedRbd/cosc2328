@@ -1,3 +1,21 @@
-node_modules
+# npm packages — installed from package.json on every machine.
+# Committing them would bloat the repo with thousands of files.
+node_modules/
+
+# .env — stores secrets like API keys and passwords.
+# Must never go to GitHub — anyone who can see your repo could read them.
+.env
+.env.*
+
+# macOS Finder metadata — irrelevant to every other OS.
+.DS_Store
+
+# Windows thumbnail cache — irrelevant to every other OS.
+Thumbs.db
+
+# NOTE: *.db files are intentionally NOT listed here.
+# voyage.db is committed so the droplet gets seed data on git pull.
+
+# Kept from earlier ICs: submission zips stay off GitHub.
 *.zip
 submission/

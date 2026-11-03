@@ -1,0 +1,44 @@
+/* IC19 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+h1 { margin-bottom: 8px; color: #58a6ff; }
+
+.label {
+  color: #8b949e;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+dl {
+  background: #161b22;
+  border-radius: 8px;
+  padding: 20px 24px;
+  border: 1px solid #30363d;
+}
+
+dt {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b949e;
+  margin-top: 16px;
+}
+
+dt:first-child { margin-top: 0; }
+
+dd {
+  font-size: 1.05rem;
+  color: #e6edf3;
+  margin: 4px 0 0 0;
+}
