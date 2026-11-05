@@ -40,53 +40,31 @@
 
 */
 
-// Step 8: ask the server for every mission, then draw the list from the answer
+const list = document.getElementById('mission-list');
+const form = document.getElementById('mission-form');
+
 async function loadMissions() {
-    // root-relative, so the same file works on localhost and on the droplet
-    const response = await fetch("/ic20/missions");
-    const missions = await response.json();
-
-    const list = document.querySelector("#mission-list");
-    list.innerHTML = "";   // clear it first, so a refresh does not stack up
-
-    missions.forEach(function (mission) {
-        const item = document.createElement("li");
-
-        const name = document.createElement("div");
-        name.classList.add("name");
-        name.textContent = mission.name;
-
-        const dest = document.createElement("div");
-        dest.classList.add("dest");
-        dest.textContent = mission.destination;
-
-        item.appendChild(name);
-        item.appendChild(dest);
-        list.appendChild(item);
-    });
+  const res  = await fetch('/ic20/missions');
+  const data = await res.json();
+  list.innerHTML = '';
+  data.forEach(m => {
+    const li = document.createElement('li');
+    li.innerHTML = `<p class="name">${m.name}</p><p class="dest">${m.destination}</p>`;
+    list.appendChild(li);
+  });
 }
 
-// Step 9: send the form to the server, then redraw from what the server now holds
-document.querySelector("#mission-form").addEventListener("submit", async function (event) {
-    event.preventDefault();   // stop the browser reloading the page
-
-    const nameInput = document.querySelector("#mission-name");
-    const destInput = document.querySelector("#mission-dest");
-
-    await fetch("/ic20/missions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            name: nameInput.value,
-            destination: destInput.value
-        })
-    });
-
-    nameInput.value = "";
-    destInput.value = "";
-
-    loadMissions();   // the server is the source of truth, so ask it again
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name        = document.getElementById('mission-name').value.trim();
+  const destination = document.getElementById('mission-dest').value.trim();
+  await fetch('/ic20/missions', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ name, destination }),
+  });
+  form.reset();
+  loadMissions();
 });
 
-// run once as soon as the page loads
 loadMissions();
