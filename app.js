@@ -6,6 +6,8 @@ const path    = require("path");                          // built-in Node modul
 const app     = express();                               // create the Express application
 const PORT    = process.env.PORT || 3000;               // NEW — IC19: use PORT from .env, fall back to 3000
 
+app.use(express.json());                                 // NEW IC20: parse JSON request bodies into req.body
+
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
 
 // IC19 — mission status route
@@ -22,6 +24,9 @@ app.get('/ic19/config', (req, res) => {                  // NEW — IC19: GET ro
     serverTime: new Date().toISOString(),
   });
 });
+
+// IC20: every request starting with /ic20 is handled by the router file
+app.use("/ic20", require("./routes/ic20-routes"));
 
 app.listen(PORT, "0.0.0.0", () =>                        // 0.0.0.0 makes the server reachable from the droplet (IC2)
   console.log(`Running on http://localhost:${PORT}`)
