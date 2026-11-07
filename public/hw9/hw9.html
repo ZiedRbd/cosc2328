@@ -1,0 +1,43 @@
+<!-- HW9 – COSC 2328 – Professor McCurry
+     Implemented by: Zied Raboudi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW9: Evidence Terminal</title>
+  <link rel="stylesheet" href="css/hw9.css">
+</head>
+<body>
+  <header>
+    <h1>Evidence Terminal</h1>
+    <p class="tagline">Precinct-Grade Case Management</p>
+  </header>
+
+  <!-- Credentials panel — populated by loadCredentials() -->
+  <section class="credentials-panel">
+    <h2>Detective Clearance</h2>
+    <dl id="credentials"></dl>
+  </section>
+
+  <!-- Case log panel — NO <form> element; JS sends fetch POST -->
+  <section class="log-panel">
+    <h2>Log New Evidence</h2>
+    <div class="input-group">
+      <input    id="suspect"  type="text" placeholder="Suspect name (required)"  />
+      <input    id="location" type="text" placeholder="Location (required)"       />
+      <textarea id="notes"    placeholder="Field notes (optional)"></textarea>
+      <button   id="log-btn">&#9654; File Case</button>
+    </div>
+    <p id="log-status" class="status-msg"></p>
+  </section>
+
+  <!-- Case list — populated by loadCases() -->
+  <section class="cases-panel">
+    <h2>Open Cases</h2>
+    <ul id="case-list"></ul>
+  </section>
+
+  <script src="js/hw9-script.js"></script>
+</body>
+</html>

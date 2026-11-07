@@ -1,0 +1,134 @@
+/* HW9 – COSC 2328 – Professor McCurry
+   Implemented by: Zied Raboudi */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #0a0a0f;
+  color: #c8d0e0;
+  min-height: 100vh;
+  padding: 32px 20px 60px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ── Header ─────────────────────────────────────── */
+header {
+  border-bottom: 1px solid #1e2a3a;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00e5ff;
+  text-shadow: 0 0 18px rgba(0, 229, 255, 0.35);
+}
+
+.tagline {
+  color: #334455;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Sections ────────────────────────────────────── */
+section {
+  background: #0d1017;
+  border: 1px solid #1e2a3a;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #334455;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #1a2230;
+  padding-bottom: 8px;
+}
+
+/* ── Credentials dl ─────────────────────────────── */
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 24px; }
+
+dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #445566;
+  padding-top: 2px;
+}
+
+dd { color: #00e5ff; font-size: 0.95rem; }
+
+/* ── Log panel ───────────────────────────────────── */
+.input-group { display: flex; flex-direction: column; gap: 10px; }
+
+input, textarea {
+  background: #070a0e;
+  border: 1px solid #1e2a3a;
+  border-radius: 4px;
+  color: #c8d0e0;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus { border-color: #00e5ff; }
+textarea { min-height: 68px; }
+
+button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: transparent;
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover { background: #00e5ff; color: #0a0a0f; }
+
+.status-msg {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #ff4466;
+  min-height: 1.1em;
+}
+
+/* ── Case list ───────────────────────────────────── */
+ul { list-style: none; }
+
+li {
+  border-left: 3px solid #1e2a3a;
+  padding: 11px 16px;
+  margin-bottom: 10px;
+  background: #070a0e;
+  border-radius: 0 4px 4px 0;
+  transition: border-left-color 0.2s;
+}
+
+li:hover { border-left-color: #00e5ff; }
+
+.case-id       { font-size: 0.68rem; color: #334455; letter-spacing: 0.1em; text-transform: uppercase; }
+.case-suspect  { font-size: 0.98rem; color: #c8d0e0; font-weight: bold; margin: 4px 0 2px; }
+.case-location { font-size: 0.82rem; color: #6a8aa0; }
+.case-notes    { font-size: 0.8rem;  color: #445566; margin-top: 6px; font-style: italic; }
+.case-ts       { font-size: 0.68rem; color: #223344; margin-top: 6px; }
+
+.empty-msg { color: #223344; font-style: italic; font-size: 0.85rem; }
