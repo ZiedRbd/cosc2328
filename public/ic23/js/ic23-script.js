@@ -6,38 +6,32 @@
    fetch GET uses zero options and the defaults work. What three options does fetch
    POST require and why does each one matter?
 
-      method, headers and body. method has to say POST because fetch sends a GET when
-      you leave it out, so the request would hit the wrong route. headers has to carry
-      Content-Type application/json or Express never parses the body and req.body
-      comes out undefined on the server. body has to be a string, so JSON.stringify
-      turns my object into one, because fetch cannot put a raw object on the wire.
+      method, headers and body. method because fetch sends a GET if you leave it out.
+      headers because Content-Type application/json is what makes Express parse the
+      body, and without it req.body is undefined. body because fetch cannot send an
+      object, so JSON.stringify turns it into a string first.
 
    Why does the db.run callback use function (err) instead of (err) =>? What would
    this.lastID be if you used an arrow function?
 
-      db.run sets this to the statement object before it calls the callback, and
-      lastID lives on that object. A regular function accepts the this that db.run
-      hands it. An arrow function never makes its own this, it borrows whatever this
-      was in the code around it, so this.lastID would be undefined and the response
-      would send back an id of undefined.
+      db.run sets this to the statement object before calling back, and lastID lives
+      there. A regular function takes that this. An arrow function makes no this of
+      its own, so this.lastID would be undefined and the id would come back undefined.
 
    What is the re-fetch pattern and why does it keep the UI in sync with the server
    instead of just appending a new li directly?
 
-      The re-fetch pattern means asking the server for the whole list again after a
-      write succeeds, rather than guessing what changed and patching the page myself.
-      It keeps things in sync because the database stays the one source of truth.
-      Appending an li by hand would only show my own guess at the row, so it would
-      miss the real id that SQLite assigned and it would drift the moment anything
-      else writes to that table.
+      It means re-fetching the whole list from the server after a write instead of
+      patching the page myself. The database stays the one source of truth. Appending
+      an li by hand would miss the real id SQLite assigned and would go stale as soon
+      as anything else writes to that table.
 
    Looking at the GET and POST side by side in the Network tab, what is different
    about the POST in the Headers and Payload tabs that the GET does not have?
 
-      The POST carries a Content-Type header of application/json, which the GET has no
-      reason to send because a GET has no body. The POST also fills the Payload tab
-      with the JSON I sent while the GET has nothing there at all. The GET answers
-      with 200 and the POST answers with 201, because a new row now exists.
+      The POST carries a Content-Type header, which the GET has no reason to send
+      because it has no body. The POST also fills the Payload tab with my JSON while
+      the GET has nothing there. The GET answers 200 and the POST answers 201.
 
 */
 
