@@ -1,0 +1,35 @@
+<!-- IC23 – COSC 2328 – Professor McCurry
+     Implemented by: Zied Raboudi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC23: Student Directory</title>
+  <link rel="stylesheet" href="css/ic23.css">
+</head>
+<body>
+  <h1>Student Directory</h1>
+
+  <h2>All Students</h2>
+  <ul id="student-list"></ul>
+
+  <h2>Add a Student</h2>
+  <div class="add-form">
+    <input id="first-name"      type="text"   placeholder="First name">
+    <input id="last-name"       type="text"   placeholder="Last name">
+    <select id="classification">
+      <option value="">Classification…</option>
+      <option value="Freshman">Freshman</option>
+      <option value="Sophomore">Sophomore</option>
+      <option value="Junior">Junior</option>
+      <option value="Senior">Senior</option>
+    </select>
+    <input id="major"           type="text"   placeholder="Major">
+    <button id="add-btn">Add Student</button>
+  </div>
+  <p id="add-result"></p>
+
+  <script src="js/ic23-script.js"></script>
+</body>
+</html>
